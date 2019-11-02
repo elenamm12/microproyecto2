@@ -13,7 +13,9 @@
         
         <div *ngIf="movie.Available == true">
             <div *ngIf="movie.Seats > 0">
-                <button>RESERVA</button>
+                <button>
+                    <a [routerLink]="['/reservation', movie.Id]">RERSERVAR</a>
+                </button>
             </div>
             <div *ngIf="movie.Seats == 0">
                 <p>AGOTADO!</p>

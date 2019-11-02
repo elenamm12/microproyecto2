@@ -1,1 +1,5 @@
-<p>admin works!</p>
+<ul>
+        <li class="text" *ngFor="let item of reservations | async">
+          {{item.apellido}}
+        </li>
+      </ul>

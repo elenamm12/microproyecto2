@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-admin',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
-
+  reservation: Observable<any[]>;
+  constructor(db: AngularFirestore) {
+    this.reservation = db.collection('reservation').valueChanges();
+  }
   ngOnInit() {
   }
 
