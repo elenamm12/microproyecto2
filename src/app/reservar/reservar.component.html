@@ -1,31 +1,27 @@
 <h1>HEADER VA AQUI</h1>
-<h1>{{pelicula.Title}}</h1>
-<div>
-    <form [formGroup]="form">
-        <label> Nombre: <input formControlNombres="Name"></label>
-        <label> Apellido: <input formControlApellido="lastname"></label>
-        <label> Cedula: <input formControlCedula="cedula"></label>
-        <label> Email: <input formControlEmail="email"></label>
-        <label> Cantidad de Asientos: <input formControlCant="cant"></label>
-    </form>
-<!-- <label>
+<div class="form">
+<h1>Reservar {{pelicula.Title}}</h1>
+<label>
     Nombre:
-    <input type="text" [formControl]="Name">
+    <input type="text" name="" id="name">
 </label>
 <label>
     Apellido:
-    <input type="text" [formControl]="Lastname">
+    <input type="text" name="" id="lastname">
 </label>
 <label>
     Cedula:
-    <input type="text" [formControl]="Cedula">
+    <input type="text" name="" id="cedula">
 </label>
 <label>
     Email:
-    <input type="text" [formControl]="Email">
-</label>     -->
+    <input type="text" name="" id="email">
+</label>   
+<label>
+    Cantidad de asientos:
+    <input type="text" name="" id="seats">
+</label>  
+
+<button (click)="morision()">FINALIZAR</button>
+<!-- <div id="boton" (click)="morision()" routerLink=""><p>FINALIZAR</p></div> -->
 </div>
-
-<button >FINALIZAR</button>
-
-<!-- onclick="{{pelicula.Seats}} == {{pelicula.Seats}}-2" -->

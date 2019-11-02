@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class MoviesService {
     return this.peliculas;
   }
 
-  constructor() { 
+  constructor(private db: AngularFirestore) { 
     this.peliculas = [
       {
         "Id": "1a57454d",
@@ -257,6 +258,8 @@ export class MoviesService {
     
   }
 
-  
+  addOrder(x){
+    this.db.collection('Movies').add(x);
+  }
 
 }

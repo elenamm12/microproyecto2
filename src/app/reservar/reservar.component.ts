@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormControlName, FormGroup, FormBuilder } from '@angular/forms';
 import { Movie } from '../models/movie'
 import { MoviesService } from '../movies.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { PeliculaComponent } from '../pelicula/pelicula.component';
 
 
@@ -14,6 +14,13 @@ import { PeliculaComponent } from '../pelicula/pelicula.component';
 export class ReservarComponent implements OnInit {
   form: FormGroup; 
 
+  name;
+  lastname;
+  cedula;
+  seats;
+  Id;
+  movie;
+  email;
   
   id;
   pelicula;
@@ -26,14 +33,18 @@ export class ReservarComponent implements OnInit {
     this.pelicula = this.service.peliculas.find(y=>{
       return y.Id === this.id;
     })
+  }
 
-    this.form = this.fb.group({
-      name : '',
-      lastname : '',
-      cedula : '',
-      email : '',
-      cant: '',
-    })
+  morision(){
+
+    this.name = (document.getElementById('name') as HTMLInputElement).value;   
+    this.lastname = (document.getElementById('lastname') as HTMLInputElement).value;
+    this.cedula = (document.getElementById('cedula') as HTMLInputElement).value; 
+    this.seats = (document.getElementById('seats') as HTMLInputElement).value;  
+    this.email = (document.getElementById('email') as HTMLInputElement).value;
+    const movie = {name:this.name, lastname: this.lastname , cedula: this.cedula, seats: this.seats, email: this.email};
+    this.service.addOrder(movie);
+    
   }
 
 }
