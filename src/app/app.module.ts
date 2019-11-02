@@ -6,6 +6,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
+import { FormService } from './form.service';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
+  providers: [FormService],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -34,7 +37,6 @@ import { AdminComponent } from './admin/admin.component';
       { path: '', component: HomeComponent },
     ])
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

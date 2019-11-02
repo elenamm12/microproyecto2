@@ -1,5 +1,10 @@
-<ul>
-        <li class="text" *ngFor="let item of reservations | async">
-          {{item.apellido}}
-        </li>
-      </ul>
+<div *ngFor="let item of forms" class="fichas">
+  <p>Name: {{item.Name}}</p>
+  <p>Lastname: {{item.Lastname}}</p>
+  <p>Cedula: {{item.Cedula}}</p>
+  <p>Email: {{item.Email}}</p>
+  <p>Seats: {{item.Seats}}</p>
+</div>
+
+<br>
+<br>
