@@ -15,7 +15,7 @@ export class FormService {
   formData: Form;
 
   constructor(private servidorsito: AngularFirestore) { 
-    this.items = this.servidorsito.collection<Form>('form').valueChanges();
+    this.items = this.servidorsito.collection<Form>('Movies').valueChanges();
 
   }
 

@@ -13,6 +13,9 @@ export class AdminComponent implements OnInit {
   forms: Form[];
 
   reservation: Observable<any[]>;
+
+  
+
   constructor(db: AngularFirestore, private servi: FormService) {
     this.reservation = db.collection('reservation').valueChanges();
   }
