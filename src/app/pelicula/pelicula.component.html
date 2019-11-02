@@ -1,0 +1,29 @@
+<div class="grid-container">
+    <img src="{{movie.Poster}}" alt="Poster" height="400">
+    <div class="movie-description">
+        <h1>{{movie.Title}}</h1>
+        <div>
+            <p>{{movie.Year}}</p> 
+            <p>{{movie.Genre}}</p>   
+            <p>{{movie.Runtime}}</p>
+        </div>
+        <div>
+            <p>{{movie.Plot}}</p>   
+        </div>
+        
+        <div *ngIf="movie.Available == true">
+            <div *ngIf="movie.Seats > 0">
+                <button>RESERVA</button>
+            </div>
+            <div *ngIf="movie.Seats == 0">
+                <p>AGOTADO!</p>
+            </div>
+        </div>
+        <div *ngIf="movie.ComingSoon == true">
+            <p>PROXIMAMENTE! Estreno: {{movie.Released}}</p>
+        </div>
+        
+    </div>
+</div>
+
+

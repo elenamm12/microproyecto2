@@ -1,0 +1,55 @@
+
+<div class="hero" id="hero">
+    <H1 class="title">CARTELERA CARACAS</H1>
+</div> 
+
+<div class="peliculas">
+    <div>
+        <h2 class="subtitle">Películas Disponibles</h2>
+        <div class="movies-grid"> 
+        
+            <div class="grid-container" *ngFor="let item of movies">
+                <div class="movie" *ngIf="item.Available == true">
+                    <a [routerLink]="['/pelicula', item.Id]" class="card" target="_blank"> 
+                        <img [src]="item.Poster" alt="Sin Poster" class="movie-layer_bottom" height="300" width="300">
+                        <div class="movie-layer_top">
+                            <div class="movie-text">
+                                <h3>{{item.Title}}</h3>
+                                <h3>{{item.Genre}}</h3>
+                                <h3>{{item.Language}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                        
+                </div>
+	        </div>
+        </div>
+    </div>
+ </div>
+
+ <div class="estrenos">
+    <div>
+        <h2 class="subtitle">Proximos Estrenos</h2>
+        <div class="movies-grid"> 
+            <div class="grid-container" *ngFor="let item of movies">
+                <div class="movie" *ngIf="item.ComingSoon == true">
+                    <a [routerLink]="['/pelicula', item.Id]" class="card" target="_blank"> 
+                        <img [src]="item.Poster" alt="Sin Poster" class="movie-layer_bottom" height="350" width="350">
+                        <div class="movie-layer_top">
+                            <div class="movie-text">
+                                <h3>{{item.Title}}</h3>
+                                <h3>{{item.Genre}}</h3>
+                                <h3>{{item.Language}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                        
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+
+
