@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { PeliculaComponent } from './pelicula/pelicula.component';
 import { ReservarComponent } from './reservar/reservar.component';
 import { AdminComponent } from './admin/admin.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
     PeliculaComponent,
     ReservarComponent,
     AdminComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

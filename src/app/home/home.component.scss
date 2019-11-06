@@ -1,26 +1,29 @@
 .hero{
     padding: 60px;
-    width: 100%;
-    height: 30vh;
-    background-size: 100%;
-    background-color: black;
+    width: auto;
+    height: 40vh;
+	background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-frame-shot-of-popcorns-royalty-free-image-924901170-1565190495.jpg);
+	filter: brightness(80%);
+	background-color: black;
     text-align: center;
-    color: white;
+	color: #FFB916;
+	background-position: center;
+	background-size: cover;
  
 }
 
 .title{
-    font-size: 85px;
-    align-self: center;
+    font-size: 8vw;
+	align-self: center;
 }
 
 .subtitle{
-    font-size: 40px;
+    font-size: 4vw;
     padding-top: 3%;
     padding-bottom: 3%;
     padding-left: 3%;
     color: white;
-    background-color: black;
+    background-color: #696D7D;
 }
 
 .peliculas{
