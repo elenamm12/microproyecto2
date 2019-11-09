@@ -9,6 +9,7 @@
 	color: #FFB916;
 	background-position: center;
 	background-size: cover;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
  
 }
 
@@ -18,16 +19,25 @@
 }
 
 .subtitle{
-    font-size: 4vw;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 3%;
+    font-size: 3vw;
     color: white;
-    background-color: #696D7D;
+	background-color: #0A100D;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin: 0%;
+	padding: 3%;
 }
 
 .peliculas{
-    display: flex;
+	display: flex;
+	width: auto;
+	height: auto;
+	background-color: #0A100D;
+}
+
+.estrenos{
+	width: auto;
+	height: 40vw;
+	background-color: #0A100D;
 }
 
 .card{
@@ -36,8 +46,9 @@
 
 .grid-container {
     display: inline-grid;
-    grid-template-columns: repeat(3); 
-    grid-gap: 100px;
+	grid-template-rows: auto auto auto;
+	justify-content: center;
+	
 }
 
 .movie,
@@ -50,6 +61,7 @@
 	overflow: hidden;
 	max-width: 100%;
 	height: auto;
+	padding: 3%;
 }
 .movie img {
     height: 0.25 fr;
